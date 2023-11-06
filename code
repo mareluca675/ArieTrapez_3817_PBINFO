@@ -1,0 +1,32 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    double a, b, c, d, m, n, arie;
+    
+    cin >> b >> d >> a >> c;
+    
+    m = ((b - a) * (b - a) + c * c - d * d) / (2 * (b - a));
+    
+    n = c * c - m * m;
+    
+    if(n > 0)
+    {
+    
+    arie = (a + b) / 2 * sqrt(c * c - m * m);
+    
+    arie = arie * 100;
+    arie = (int) arie;
+    arie = arie / 100;
+    
+    cout << fixed << setprecision(2) << arie;
+    }
+    else
+    {
+        cout << "Imposibil";
+    }
+    
+    return 0;
+}
